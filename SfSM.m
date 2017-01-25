@@ -121,7 +121,6 @@ classdef SfSM < handle
             
             depth_init_ = min_depth./depth_init;
             depth_init_ = min(max(depth_init_,0),1);
-            figure, imagesc(depth_init_); colormap jet;
             imwrite(depth_init_,fullfile(this.srcdir, this.cname, [this.cname, '_depth.png']));
         end
     end
